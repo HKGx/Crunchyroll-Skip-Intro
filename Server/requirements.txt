@@ -1,0 +1,6 @@
+flask
+flask-cors
+ansicolors
+psycopg2
+pony
+discord.py
