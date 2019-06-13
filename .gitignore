@@ -1,0 +1,8 @@
+
+Server/\.idea/
+
+*.pyc
+
+Server/config\.json
+
+Server/bot\.json
