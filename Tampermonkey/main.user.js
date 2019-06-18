@@ -13,12 +13,8 @@ var url = "51.68.142.188:5000/";
 var menu;
 var timeChange;
 
-
 const customCSS =
     ".tofade {\n    opacity: 1;\n    transition: opacity 500ms;\n}\n.tofade.fade {\n    opacity: 0;\n}";
-
-
-
 
 
 const addNeccesaryClasses = (obj) => obj.classList.add("facebook", "left");
@@ -29,20 +25,6 @@ const fadeAndRemove = (obj, time = 2500) =>
     }, time);
 
 
-function createSkipButton() {
-    const twitter = document.getElementsByClassName("twitter")[0];
-    twitter.style.marginRight = "12px";
-    let span = document.createElement("span");
-    span.classList.add("facebook");
-    span.classList.add("left");
-    let buttonChild = document.createElement("button");
-    buttonChild.textContent = "SKIP";
-    buttonChild.style.width = "60px";
-    buttonChild.style.height = "20px";
-    buttonChild.addEventListener("click", onSkipClicked);
-    span.appendChild(buttonChild);
-    menu.appendChild(span);
-}
 
 function createMessage(text, color) {
     if (document.getElementById("skipperMessage")) {
@@ -67,8 +49,24 @@ function onSkipClicked() {
     if (timeChange === 0) {
         return createMessage("Episode has no intro.", "#77dd77");
     }
-    VILOS_PLAYERJS.setCurrentTime(timeChange);
+    window.VILOS_PLAYERJS.setCurrentTime(timeChange);
 }
+
+function createSkipButton() {
+    const twitter = document.getElementsByClassName("twitter")[0];
+    twitter.style.marginRight = "12px";
+    let span = document.createElement("span");
+    span.classList.add("facebook");
+    span.classList.add("left");
+    let buttonChild = document.createElement("button");
+    buttonChild.textContent = "SKIP";
+    buttonChild.style.width = "60px";
+    buttonChild.style.height = "20px";
+    buttonChild.addEventListener("click", onSkipClicked);
+    span.appendChild(buttonChild);
+    menu.appendChild(span);
+}
+
 function getTimeChange() {
     try {
         const pathname = new URL(window.location.href).pathname;
@@ -94,14 +92,14 @@ function getTimeChange() {
 
 function onLoad() {
     const newStyle = document.createElement("style");
-    newStyle.innerHTML = customCSS;
+    newStyle.appendChild(document.createTextNode(customCSS));
     document.body.append(newStyle);
     menu = document.getElementsByClassName(
         "showmedia-submenu white-wrapper cf container-shadow small-margin-bottom"
     )[0];
-    if (!VILOS_PLAYERJS) { return };
-    if (!getTimeChange()) { return };
-    if (!createSkipButton()) { return };
+    if (!window.VILOS_PLAYERJS) { return; };
+    if (!getTimeChange()) { return; };
+    if (!createSkipButton()) { return; };
 }
 
 (function () {
