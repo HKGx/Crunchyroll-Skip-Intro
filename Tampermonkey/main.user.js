@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Crunchyroll Skip Intro
 // @namespace    HKG
-// @version      0.15
+// @version      0.2
 // @description  should be self-explanatory.
 // @author       HKG
 // @match        https://www.crunchyroll.com/*/*
