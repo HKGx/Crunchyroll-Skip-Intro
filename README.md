@@ -1,10 +1,10 @@
 # Crunchyroll Intro Skipper
 
-## What is that?
+## What is that
 
 > The name should be pretty much self-explanatory, but basically, it's a piece of software to allow you to skip openings on Crunchyroll.
 
-## How to use it?
+## How to use it
 
 > 1.  Download [Tampermonkey](https://www.tampermonkey.net/) from your extension store.
 > 2.  Click [HERE](https://github.com/HKGx/Crunchyroll-Skip-Intro/raw/master/Tampermonkey/main.user.js) to install the user script.
@@ -12,7 +12,7 @@
 
 ![](https://i.imgur.com/oq4acmN.gif)
 
-## There are no episodes listed!
+## There are no episodes listed
 
 > Yeah, it's kinda new project and I didn't have time to add anything (and I don't really watch that many anime).
 > If you want you can send me episodes on [my Discord.](https://discord.gg/HSQyVuh)

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Crunchyroll Skip Intro
 // @namespace    HKG
-// @version      0.2
+// @version      0.21
 // @description  should be self-explanatory.
 // @author       HKG
 // @match        https://www.crunchyroll.com/*/*
@@ -97,9 +97,9 @@ function onLoad() {
     menu = document.getElementsByClassName(
         "showmedia-submenu white-wrapper cf container-shadow small-margin-bottom"
     )[0];
-    if (!window.VILOS_PLAYERJS) { return; };
-    if (!getTimeChange()) { return; };
-    if (!createSkipButton()) { return; };
+    if (!window.VILOS_PLAYERJS) { return; }
+    if (!getTimeChange()) { return; }
+    if (!createSkipButton()) { return; }
 }
 
 (function () {
