@@ -1,6 +1,6 @@
 # Crunchyroll Intro Skipper
 
-## The server on my side is dead.
+## The server on my side is dead
 
 > If you want it to work – you need to self-host it.
 
