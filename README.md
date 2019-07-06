@@ -1,5 +1,9 @@
 # Crunchyroll Intro Skipper
 
+## The server on my side is dead.
+
+> If you want it to work – you need to self-host it.
+
 ## What is that
 
 > The name should be pretty much self-explanatory, but basically, it's a piece of software that allows you to skip openings on Crunchyroll.
